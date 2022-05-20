@@ -1,0 +1,15 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open index.html",
+            "file": "\\192.168.0.67\\이선희_과제제출\\프로젝트1_0512_OpenAPI활용SNS마케팅자동화구현\\1조 JUNiX\\index.html",
+            "runtimeArgs": ["--disable-web-security"]
+        }
+    ]
+}

@@ -1,121 +1,742 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | My project-junix</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-  </head>
-  <body>
-    <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=716 height=768></canvas>
-      <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
-        <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JUNiX</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div id ="title">
+                <a>Online Exhibition by </a><span>JUNiX</span>
+                <hr>
+            </div>
+            <ul>
+                <li><a href="#1">JUNiX 온라인 전시</a></li>
+                <li><a href="#1">참여혜택</a></li>
+                <li><a href="#1">이용절차</a></li>
+                <li><a href="#1">부스 타입</a></li>
+                <li><a href="#1">지원사항</a></li>
+                <li><a href="#1">상담절차</a></li>
+                <li><a href="#1">무엇을 도와드릴까요?</a></li>
+            </ul>
+        </nav>
+        <!--헤더 메뉴업-->
+        <script>
+            window.addEventListener("scroll", function(){
+                var nav11 = this.document.querySelector("nav");
+                nav11.classList.toggle("sticky", window.scrollY >0);
+            });
+        </script>
+        <div class="title_text">
+            <a>시공간 제약이 없는 국내외 비대면</a><br>
+            <a>비즈니스 플랫폼 JUNiX입니다.</a>
+    </header>
+    <section id ="online_exhibition">
+        <div class="main_title">
+            <p>JUNiX 온라인 전시</p>
         </div>
-      </div>
-      <div id="unity-warning"> </div>
-      <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">My project-junix</div>
-      </div>
-    </div>
+        <div class="sub_title">
+            <p>Online Exhibition by JUNiX</p>
+        </div>
+        <div class="text">
+            <a>JUNiX는 제품 홍보를 위해 <span>가상 공간</span>에 <span>부스를 제작</span>하여 <span>전시회 서비스</span>를 제공하고 있습니다.</a></br>
+            <a>양질의 제품 모델링과 공간 연출로 생동감 있는 홍보관을 구현해 드립니다.</a>
+        </div>
+        <div id ="service_all">
+            <div class="service">
+                <div class="service_img">
+                    <img src="./image/icon_1.png" alt="온라인 전시공간">
+                </div>
+                <div class="service_title">
+                    <a>온라인 전시공간</a>
+                </div>
+                <div class="service_text">
+                    <a>생생한 현장감 365일 24시간 OPEN</a>
+                </div>
+            </div>
+            <div class="service">
+                <div class="service_img">
+                    <img src="./image/icon_2.png" alt="폭넓은 마케팅">
+                </div>
+                <div class="service_title">
+                    <a>폭넓은 마케팅</a>
+                </div>
+                <div class="service_text">
+                    <a>국내국외 제약없는 마케팅</a>
+                </div>
+            </div>
+            <div class="service">
+                <div class="service_img">
+                    <img src="./image/icon_3.png" alt="손쉬운 조작">
+                </div>
+                <div class="service_title">
+                    <a>손쉬운 조작</a>
+                </div>
+                <div class="service_text">
+                    <a>간단한 교육을 통해 직접관리</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id ="benefits">
+        <div class="main_title">
+            <p>참가혜택</p>
+        </div>
+        <div class="sub_title">
+            <p>Participation benefits</p>
+        </div>
+        <div class="benefits_contants">
+            <div class="benefits_img">
+                <img src="./image/online3.png" alt="benefits_img">
+            </div>
+            <div class="benefits_all">
+                <!--사용자 Needs에 맞는 최고의 플랫폼-->
+                <div class="benefits_text">
+                    <div class="text_box" id="text_box1" onclick=" click01()">사용자 Needs에 맞는 최고의 플랫폼</div>
+                    <div class="contents_box" id="text_box5">
+                        <div class="benefits_contants_text">
+                            <p>JUNiX가 자체제작한 탬플릿을 기본으로 제공하고 전시 방법과 스타일을 원하는 대로 변경 할 수 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--메타버스형 서비스-->
+                <div class="benefits_text">
+                    <div class="text_box" id="text_box2" onclick=" click02()">메타버스형 서비스</div>
+                    <div class="contents_box" id="text_box6">
+                        <div class="benefits_contants_text">
+                            <p>단순한 쇼핑몰 상품 배열 형태가 아닌, 가상 로비 및 가상 부스 UI를 제공하여, 참가자들이 행사에 몰입할 수 있도록, 현실감 있는 정보 전달 기능을 제공합니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--비지니스 매칭-->
+                <div class="benefits_text">
+                    <div class="text_box" id="text_box3" onclick=" click03()">비지니스 매칭</div>
+                    <div class="contents_box" id="text_box7">
+                        <div class="benefits_contants_text">
+                            <p>가상 라운지에서 전 세계의 잠재 고객을 만날 수 있는 기회를 만들어 보세요.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--참여자 관리-->
+                <div class="benefits_text">
+                    <div class="text_box" id="text_box4" onclick=" click04()">참여자 관리</div>
+                    <div class="contents_box" id="text_box8">
+                        <div class="benefits_contants_text">
+                            <p>단 한 번의 클릭으로 초대장과 감사장을 보내어 참여자와 소통해 보세요.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id ="procedure">
+        <div class="main_title">
+            <p>이용절차</p>
+        </div>
+        <div class="sub_title">
+            <p>Procedure</p>
+        </div>
+        <div class="procedure_contents">
+            <div class="procedure_all">
+                <div class="procedure_text">
+                    <p>1단계</p>
+                    <p>전시회 공고</p>
+                    <a href="http://mainia.tistory.com" title="홈페이지 바로가기 >>">
+                        홈페이지 바로가기 >>
+                    </a>
+                </div>
+            </div>
+            <div class="procedure_all">
+                <div class="procedure_text">
+                    <p>2단계</p>
+                    <p>온라인 부스 모집</p>
+                    <a href="http://mainia.tistory.com" title="홈페이지 바로가기 >>">
+                        홈페이지 바로가기 >>
+                    </a>
+                </div>
+            </div>
+            <div class="procedure_all">
+                <div class="procedure_text">
+                    <p>3단계</p>
+                    <p>온라인 부스 제작 후<br>
+                        개별 URL 제공<br>
+                        + 조작법 교육</p>
+                </div>
+            </div>
+            <div class="procedure_all">
+                <div class="procedure_text">
+                    <p>4단계</p>
+                    <p>전시회 개최</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id ="booth_type">
+        <div class="booth_type_text">
+            <div class="main_title">
+                <p>부스 타입</p>
+            </div>
+            <div class="sub_title">
+                <p>Booth Type</p>
+                <p>일반형 / 고급형 / 프리미엄형</p>
+            </div>
+        </div>
+        <div id = "type_all" >
+            <div class="type_contents">
+                <div class="contents_text">
+                    <p>일반형 <a>(Nomal Booth)</a></p>
+                    <p>in 2021 서울일러스트코리아</p>
+                    <p>일반형 디자인은 3D로 제작된 일반 템플릿 디자인 중에 선택하는 방식입니다.<br>
+                        기본형 디자인을 제공하는 서비스에 브로셔 다운로드 기능 등을 제공합니다.</p>
+                </div>
+                <div class="contents_img">
+                    <img src="./image/booth_1.png" alt="일반형">
+                </div>
+            </div>
+            <div class="type_contents">
+                <div class="contents_text">
+                    <p>고급형 <a>(Advance Booth)</a></p>
+                    <p>in 2022 국제 그린에너지 엑스포</p>
+                    <p>고급형 디자인은 3D로 제작된 다양한 템플릿 중에 선택하는 방식입니다.<br>
+                        디자인 제공 서비스에 제품진열, 브로셔 다운로드, 영상 재생 등 추가 서비스를 제공합니다.</p>
+                </div>
+                <div class="contents_img">
+                    <img src="./image/booth_2.png" alt="고급형">
+                </div>
+            </div>
+            <div class="type_contents">
+                <div class="contents_text">
+                    <p>프리미엄형 <a>(Premium Booth)</a></p>
+                    <p>in 2020 서울리빙디자인페어</p>
+                    <p>프리미엄형 디자인은 고객의 니즈를 반영해 독창적인 디자인으로 제작되는 주문제작형 부스 입니다.<br>
+                        고급형 제공 서비스에 추가로 제품 소개용 크로마키 구현이 가능합니다.</p>
+                </div>
+                <div class="contents_img">
+                    <img src="./image/booth_3.png" alt="프리미엄형">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id = "plans">
+        <div class="main_title">
+            <p>지원사항</p>
+        </div>
+        <div class="sub_title">
+            <p>Plans & Pricing Table</p>
+        </div>
+        <!--모바일 상세표 버튼-->
+        <div id ="plans_all">
+            <div id="boxs">
+                <div class="box" id="box1" onclick="box01(),btn01(),font01(),margin01()">일반형</div>
+                <div class="box" id="box2" onclick="box02(),btn02(),font02(),margin02()">고급형</div>
+                <div class="box" id="box3" onclick="box03(),btn03(),font03(),margin03()">프리미엄형</div>
+            </div>
+            <div id="bigboxs">
+                <!--일반형-->
+                <div class="bigbox" id="box4">
+                    <div class="plans_day">
+                        <p>신청기간</p>
+                    </div>
+                    <div class="plans_day_text">
+                        <p>2022.10.14(금)까지</p>
+                        <hr>
+                    </div>
+                    <div class="plans_pay">
+                        <p>부스비용</p>
+                    </div>
+                    <div class="plans_pay_text">
+                        <p>500,000원 ~ </p>
+                        <hr>
+                    </div>
+                    <div class="plans_give">
+                        <p>제공사항</p>
+                    </div>
+                    <div class="plans_give_text">
+                        <p>이미지상(6x3)부스 (템플릿)</p>
+                        <p>유지보수 (횟수제한)</p>
+                        <p>찜하기/문의하기/화상미팅 제공</p>
+                        <p>온라인 초청장 제공</p>
+                        <p>출품 제품 더보기</p>
+                        <p>유튜브 소개영상 (1개)</p>
+                        <p>제품 진열 (3개)</p>
+                        <p>명함교환</p>
+                        <p>고객센터</p>
+                        <hr>
+                    </div>
+                    <div class="plans_more">
+                        <p>추가 옵션사항</p>
+                    </div>
+                    <div class="plans_more_text">
+                        <p>제품 진열 수량추가</p>
+                        <p>부스디자인 변경</p>
+                        <p>영문번역</p>
+                    </div>
+                </div>
+                <!--고급형-->
+                <div class="bigbox"id="box5">
+                    <div class="plans_day">
+                        <p>신청기간</p>
+                    </div>
+                    <div class="plans_day_text">
+                        <p>2022.10.14(금)까지</p>
+                        <hr>
+                    </div>
+                    <div class="plans_pay">
+                        <p>부스비용</p>
+                    </div>
+                    <div class="plans_pay_text">
+                        <p>800,000원 ~ </p>
+                        <hr>
+                    </div>
+                    <div class="plans_give">
+                        <p>제공사항</p>
+                    </div>
+                    <div class="plans_give_text">
+                        <p>이미지상(9x6)부스 (템플릿)</p>
+                        <p>유지보수 (횟수제한)</p>
+                        <p>찜하기/문의하기/화상미팅 제공</p>
+                        <p>온라인 초청장 제공</p>
+                        <p>출품 제품 더보기</p>
+                        <p>유튜브 소개영상 (3개)</p>
+                        <p>제품 진열 (5개)</p>
+                        <p>명함교환</p>
+                        <p>고객센터</p>
+                        <hr>
+                    </div>
+                    <div class="plans_more">
+                        <p>추가 옵션사항</p>
+                    </div>
+                    <div class="plans_more_text">
+                        <p>제품 진열 수량추가</p>
+                        <p>부스디자인 변경</p>
+                        <p>영문번역</p>
+                    </div>
+                </div>
+                <!--프리미엄형-->
+                <div class="bigbox"id="box6">
+                    <div class="plans_day">
+                        <p>신청기간</p>
+                    </div>
+                    <div class="plans_day_text">
+                        <p>2022.10.14(금)까지</p>
+                        <hr>
+                    </div>
+                    <div class="plans_pay">
+                        <p>부스비용</p>
+                    </div>
+                    <div class="plans_pay_text">
+                        <p>상담 후 협의</p>
+                        <hr>
+                    </div>
+                    <div class="plans_give">
+                        <p>제공사항</p>
+                    </div>
+                    <div class="plans_give_text">
+                        <p>이미지상(12x9)부스 (주문제작)</p>
+                        <p>유지보수 (횟수제한)</p>
+                        <p>찜하기/문의하기/화상미팅 제공</p>
+                        <p>온라인 초청장 제공</p>
+                        <p>출품 제품 더보기</p>
+                        <p>유튜브 소개영상 (제한없음)</p>
+                        <p>제품 진열 (10개)</p>
+                        <p>명함교환</p>
+                        <p>고객센터</p>
+                        <hr>
+                    </div>
+                    <div class="plans_more">
+                        <p>추가 옵션사항</p>
+                    </div>
+                    <div class="plans_more_text">
+                        <p>제품 진열 수량추가</p>
+                        <p>부스디자인 변경</p>
+                        <p>영문번역</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--PC 상세표-->
+        <div id ="plans_all_1">
+            <div id="boxs_1">
+                <div class="box"></div>
+                <div class="box">일반형</div>
+                <div class="box">고급형</div>
+                <div class="box">프리미엄형</div>
+            </div>
+            <div class="boxs_1_hr">
+                <hr>
+            </div>
+            <div id="boxs_2">
+                <div class="box"><p>신청기간</p></div>
+                <div class="box">2022.10.14(금)까지</div>
+                <div class="box">2022.10.14(금)까지</div>
+                <div class="box">2022.10.14(금)까지</div>
+            </div>
+            <div class="boxs_1_hr">
+                <hr>
+            </div>
+            <div id="boxs_2">
+                <div class="box"><p>부스비용</p></div>
+                <div class="box">500,000원 ~ </div>
+                <div class="box">800,000원 ~ </div>
+                <div class="box">상담 후 협의</div>
+            </div>
+            <div class="boxs_1_hr">
+                <hr>
+            </div>
+            <!--일반형-->
+            <div class="bigbox_1">
+                <div class="plans_text_1">
+                    <p>기본</p>
+                </div>
+                <div class="plans_text_1">
+                    <p>이미지상(6x3)부스 (템플릿)</p>
+                    <p>유지보수 (횟수제한)</p>
+                    <p>찜하기/문의하기/화상미팅 제공</p>
+                    <p>온라인 초청장 제공</p>
+                    <p>출품 제품 더보기</p>
+                    <p>유튜브 소개영상 (1개)</p>
+                    <p>제품 진열 (3개)</p>
+                    <p>명함교환</p>
+                    <p>고객센터</p>
+                </div>
+            <!--고급형-->
+                <div class="plans_text_1">
+                    <p>이미지상(9x6)부스 (템플릿)</p>
+                    <p>유지보수 (횟수제한)</p>
+                    <p>찜하기/문의하기/화상미팅 제공</p>
+                    <p>온라인 초청장 제공</p>
+                    <p>출품 제품 더보기</p>
+                    <p>유튜브 소개영상 (3개)</p>
+                    <p>제품 진열 (5개)</p>
+                    <p>명함교환</p>
+                    <p>고객센터</p>
+                </div>
+                <!--프리미엄형-->
+                <div class="plans_text_1">
+                    <p>이미지상(12x9)부스 (주문제작)</p>
+                    <p>유지보수 (횟수제한)</p>
+                    <p>찜하기/문의하기/화상미팅 제공</p>
+                    <p>온라인 초청장 제공</p>
+                    <p>출품 제품 더보기</p>
+                    <p>유튜브 소개영상 (제한없음)</p>
+                    <p>제품 진열 (10개)</p>
+                    <p>명함교환</p>
+                    <p>고객센터</p>
+                </div>
+            </div>
+            <!-- 밑줄 div -->
+            <div class="boxs_1_hr">
+                <hr>
+            </div>
+            <!-- 옵션추가 -->
+            <div class ="bigbox_2">
+                <div id ="plans_more_1">
+                    <p>옵션</p>
+                </div>
+                <div id ="plans_more_1_text">
+                    <p>제품 진열 수량추가, 부스디자인 변경, 영문번역</p>
+                </div>
+            </div>
+            <!-- 밑줄 div -->
+            <div class="boxs_1_hr">
+                <hr>
+            </div>
+        </div>
+    </section>
+    <section id = "consultation">
+        <div class="main_title">
+            <p>상담절차</p>
+        </div>
+        <div class="sub_title">
+            <p>Consultation Procedure</p>
+        </div>
+        <div id = "process_all">
+            <div class="process_contents">
+                <div class="contents_icon">
+                    <img src="./image/process_1.png" alt="상담신청">
+                </div>
+                <div class="contents_text">
+                    <p>1단계</p>
+                    <p>상담신청</p>
+                </div>
+            </div>
+            <div class="process_contents">
+                <div class="contents_icon">
+                    <img src="./image/process_2.png" alt="상담 후 프로젝트 착수">
+                </div>
+                <div class="contents_text">
+                    <p>2단계</p>
+                    <p>상담 후 프로젝트 착수</p>
+                </div>
+            </div>
+            <div class="process_contents">
+                <div class="contents_icon">
+                    <img src="./image/process_3.png" alt="제작 및 1차 결제">
+                </div>
+                <div class="contents_text">
+                    <p>3단계</p>
+                    <p>제작 및 1차 결제</p>
+                </div>
+            </div>
+            <div class="process_contents">
+                <div class="contents_icon">
+                    <img src="./image/process_4.png" alt="컨펌">
+                </div>
+                <div class="contents_text">
+                    <p>4단계</p>
+                    <p>컨펌</p> 
+                </div>
+            </div>
+            <div class="process_contents">
+                <div class="contents_icon">
+                    <img src="./image/process_5.png" alt="프로젝트 완료 및 2차 결제">
+                </div>
+                <div class="contents_text">
+                    <p>5단계</p>
+                    <p>프로젝트 완료 및 2차 결제</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id ="contact">
+        <div class="main_title">
+            <p>무엇을 도와드릴까요?</p>
+        </div>
+        <div class="sub_title">
+            <p>Please Contact Us</p>
+        </div>
+        <div class="sub_title_k">
+            <p>상담예약을 하시면 온라인부스</p><p>샘플페이지도 함께 제공해드립니다</p>
+        </div>
+        <div class="contact_contents">
+            <div class="contact_input">
+                <div class="contact_title">
+                    <a>성함 <span> Name </span> <p> *</p></a>
+                </div>
+                <input type="text" id="Name" />
+            </div>
+            <div class="contact_input">
+                <div class="contact_title">
+                    <a>전화번호 <span>Phone </span><p>*</p></a>
+                </div>
+                <input type="text" id="Tel" />
+            </div>
+            <div class="contact_input">
+                <div class="contact_title">
+                    <a>회사명 <span>Company</span><p>*</p></a>
+                </div>
+                <input type="text" id="Com" />
+            </div>
+            <div class="contact_input">
+                <div class="contact_title">
+                    <a>이메일 <span>E-mail</span><p>*</p></a>
+                </div>
+                <input type="text" id="Mail" />
+            </div>
+            <div class="contact_input">
+                <div class="contact_title">
+                    <a>부스타입 <span>Type</span></a>
+                </div>
+                <div id = radio>
+                    <label for="Type1" class="radio">
+                        <input type="radio" name="rdo" id="Type1" class="hidden"/>
+                        <span class="label">일반형</span>
+                    </label>
+                    <label for="Type2" class="radio">
+                        <input type="radio" name="rdo" id="Type2" class="hidden"/>
+                        <span class="label">고급형</span>
+                    </label>
+                    <label for="Type3" class="radio">
+                        <input type="radio" name="rdo" id="Type3" class="hidden"/>
+                        <span class="label">프리미엄형</span>
+                    </label>
+                </div>
+                <hr>
+            </div>
+            <div class="contact_input">
+                <div class="contact_title">
+                    <a>문의사항 <span>Inquiry</span></a>
+                </div>
+                <input type="text" id="Inq" />
+            </div>
+            <div class="contact_input_all">
+                <div class="contact_input_1">
+                    <label for="Type4" class="checkbox">
+                        <input type="checkbox" name="che" id="Type4" class="hidden"/>
+                        <span class="label"> 개인정보제공에 동의합니다 <p>*</p></span>
+                    </label>
+                </div>
+                <div class="contact_input_1">
+                    <span><p>*</p> 표시는 필수입력 사항입니다</span>
+                </div>
+            </div>
+            <div class="button">
+                <button onclick="btn_sendMessage()">상담 예약하기</button>
+            </div>
+        </div>
+    </section>
+    <hr class ="line">
+    <footer>
+        <div id = "footer_all">
+            <div class="footer_top">
+                <div class="logo">
+                    <a>JUNiX</a>
+                </div>
+                <div class="footer_text">
+                    <a>홈페이지 바로가기>></a>
+                </div>
+            </div>
+            <div class="footer_contents">
+                <a>주소 : 우리은하 오리온자리 나선팔 태양계</a>
+                <a>전화번호 : 012 - 345 - 6789</a>
+                <a>이메일 : contact@junix.co.kr</a>
+                <a>개인정보처리방침</a>
+                <a>@2022 JUNiX All Rights Reserved.</a>
+            </div>
+        </div>
+    </footer>
+    <a href="#TOP" class="goto-top" style="display: inline;">
+        <img src="./image/top.png" alt="top button">
+    </a>
+    <!--참여혜택 스크립트-->
+    <!-- <script>
+        var text_box1 = document.querySelector("#text_box1")
+        var text_box2 = document.querySelector("#text_box2")
+        var text_box3 = document.querySelector("#text_box3")
+        var text_box4 = document.querySelector("#text_box4")
+        var text_box5 = document.querySelector("#text_box5")
+        var text_box6 = document.querySelector("#text_box6")
+        var text_box7 = document.querySelector("#text_box7")
+        var text_box8 = document.querySelector("#text_box8")
+        
+        function click01(){
+            if(text_box5.style.display == "none"){
+                text_box5.style.display = "block"
+            }else if(text_box5.style.display == "block"){
+                text_box5.style.display = "none"
+            }else{text_box5.style.display = "none"}
+        }
+        function click02(){
+            if(text_box6.style.display == "none"){
+                text_box6.style.display = "block"
+            }else if(text_box6.style.display == "block"){
+                text_box6.style.display = "none"
+            }else{text_box6.style.display = "none"}
+        }
+        function click03(){
+            if(text_box7.style.display == "none"){
+                text_box7.style.display = "block"
+            }else if(text_box7.style.display == "block"){
+                text_box7.style.display = "none"
+            }else{text_box7.style.display = "none"}
+        }
+        function click04(){
+            if(text_box8.style.display == "none"){
+                text_box8.style.display = "block"
+            }else if(text_box8.style.display == "block"){
+                text_box8.style.display = "none"
+            }else{text_box8.style.display = "none"}
+        }
+    
+        click01(),click02(),click03(),click04()
+        
+    </script> -->
+    <!--지원사항(plans) 스크립트-->
     <script>
-      var container = document.querySelector("#unity-container");
-      var canvas = document.querySelector("#unity-canvas");
-      var loadingBar = document.querySelector("#unity-loading-bar");
-      var progressBarFull = document.querySelector("#unity-progress-bar-full");
-      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-      var warningBanner = document.querySelector("#unity-warning");
-
-      // Shows a temporary message banner/ribbon for a few seconds, or
-      // a permanent error message on top of the canvas if type=='error'.
-      // If type=='warning', a yellow highlight color is used.
-      // Modify or remove this function to customize the visually presented
-      // way that non-critical warnings and error messages are presented to the
-      // user.
-      function unityShowBanner(msg, type) {
-        function updateBannerVisibility() {
-          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+        var box1 = document.querySelector("#box1")
+        console.log(box1)
+        var box2 = document.querySelector("#box2")
+        var box3 = document.querySelector("#box3")
+        var box4 = document.querySelector("#box4")
+        var box5 = document.querySelector("#box5")
+        var box6 = document.querySelector("#box6")
+        
+        function btn01(){
+            box1.style.backgroundColor= "white"
+            box2.style.backgroundColor = ""
+            box3.style.backgroundColor = ""
         }
-        var div = document.createElement('div');
-        div.innerHTML = msg;
-        warningBanner.appendChild(div);
-        if (type == 'error') div.style = 'background: red; padding: 10px;';
-        else {
-          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-          setTimeout(function() {
-            warningBanner.removeChild(div);
-            updateBannerVisibility();
-          }, 5000);
+        function btn02(){
+            box1.style.backgroundColor= ""
+            box2.style.backgroundColor = "white"
+            box3.style.backgroundColor = ""
         }
-        updateBannerVisibility();
-      }
-
-      var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/testing_1021.loader.js";
-      var config = {
-        dataUrl: buildUrl + "/testing_1021.data.unityweb",
-        frameworkUrl: buildUrl + "/testing_1021.framework.js.unityweb",
-        codeUrl: buildUrl + "/testing_1021.wasm.unityweb",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "JUNiX",
-        productName: "My project-junix",
-        productVersion: "0.1",
-        showBanner: unityShowBanner,
-      };
-
-      // By default Unity keeps WebGL canvas render target size matched with
-      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
-      // Set this to false if you want to decouple this synchronization from
-      // happening inside the engine, and you would instead like to size up
-      // the canvas DOM size and WebGL render target sizes yourself.
-      // config.matchWebGLToCanvasSize = false;
-
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        // Mobile device style: fill the whole browser client area with the game canvas:
-
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        document.getElementsByTagName('head')[0].appendChild(meta);
-        container.className = "unity-mobile";
-
-        // To lower canvas resolution on mobile devices to gain some
-        // performance, uncomment the following line:
-        // config.devicePixelRatio = 1;
-
-        canvas.style.width = window.innerWidth + 'px';
-        canvas.style.height = window.innerHeight + 'px';
-
-        unityShowBanner('WebGL builds are not supported on mobile devices.');
-      } else {
-        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-
-        canvas.style.width = "716px";
-        canvas.style.height = "768px";
-      }
-
-      loadingBar.style.display = "block";
-
-      var script = document.createElement("script");
-      script.src = loaderUrl;
-      script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-          progressBarFull.style.width = 100 * progress + "%";
-        }).then((unityInstance) => {
-          loadingBar.style.display = "none";
-          fullscreenButton.onclick = () => {
-            unityInstance.SetFullscreen(1);
-          };
-        }).catch((message) => {
-          alert(message);
-        });
-      };
-      document.body.appendChild(script);
+        function btn03(){
+            box1.style.backgroundColor= ""
+            box2.style.backgroundColor = ""
+            box3.style.backgroundColor = "white"
+        }
+        function margin01(){
+            box1.style.margin= "0 5% 0 0"
+            box2.style.margin = "0 5% 0 0"
+            box3.style.margin = ""
+        }
+        function margin02(){
+            box1.style.margin= ""
+            box2.style.margin = "0 5%"
+            box3.style.margin = ""
+        }
+        function margin03(){
+            box1.style.margin= "0 5% 0 0"
+            box2.style.margin = "0 5% 0 0"
+            box3.style.margin = ""
+        }
+        function font01(){
+            box1.style.color= "#111111"
+            box2.style.color = ""
+            box3.style.color = ""
+        }
+        function font02(){
+            box1.style.color= ""
+            box2.style.color = "#111111"
+            box3.style.color = ""
+        }
+        function font03(){
+            box1.style.color= ""
+            box2.style.color = ""
+            box3.style.color = "#111111"
+        }
+        function box01(){
+            box4.style.display = "block"
+            box5.style.display = "none"
+            box6.style.display = "none"
+        }
+        
+        function box02(){
+            box4.style.display = "none"
+            box5.style.display = "block"
+            box6.style.display = "none"
+        }
+        
+        function box03(){
+            box4.style.display = "none"
+            box5.style.display = "none"
+            box6.style.display = "block"
+        }
+        
+        // box1.addEventListener("mousemove", box01)
+        // box2.addEventListener("mousemove", box02)
+        // box3.addEventListener("mousemove", box03)
+        
+        
+        /*
+        1번 버튼을 클릭 했을 때  4번 display가 block 5,6번 display가 none이 되어야함
+        2번 버튼을 클릭 했을 때  5번 display가 block 4,6번 display가 none이 되어야함
+        3번 버튼을 클릭 했을 때  6번 display가 block 4,5번 display가 none이 되어야함
+        
+        */
+        box01(),btn01(),font01(),margin01()
+        
+        
     </script>
-  </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/hmac-sha256.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/enc-base64-min.js"></script>
+    <script src="./js/solapi.js"></script>
+    <script src="./js/main.js"></script>
+</body>
 </html>

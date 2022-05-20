@@ -1,0 +1,297 @@
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'NanumGothic';
+}
+li {list-style: none;}
+a { color: white; text-decoration: none; }
+
+body{
+    background-color: #111111;
+    color: #ffffff;
+}
+
+/* div{
+    border: 1px solid tomato;
+} */
+
+/*모바일 해더*/
+header{
+    position: fixed;
+    width: 100%;
+}
+
+#pc{
+    display: none;
+}
+
+header #mobile_title {
+    margin-right: 10%;
+    text-align: right;
+    padding-top: 5px;
+}
+#icon{
+    position: absolute;
+    left: 10px;
+}
+
+#icon img{
+    width: 24px;
+    height: 24px;
+}
+
+header nav#mo #mobile_title a {
+    display: none;
+}
+header #mobile_title hr {
+    margin: 5px 0 10px 0;
+}
+
+#mobile_menu{
+    background-color: #111111;
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    padding: 0 15px;
+}
+
+#mobile_menu li{
+    padding: 13px 0 13px 0;
+    border-bottom: 1px solid #818181;
+}
+
+#mobile_menu a{
+    font-size: 18px;
+}
+
+header nav#mo ul {
+    z-index: 99999999999;
+}
+#mobile_title span {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+}
+#dummy_text {
+    /* padding-top: 200px; */
+    text-align: center;
+    font-size: 25px;
+}
+
+@media screen and (min-width:1109px) {
+
+    #dummy_text {
+        /* margin-top: 150px; */
+        font-size: 35px;
+    }
+    .wow {
+        display: none;
+    }
+    header .title_text a{
+        float: right;
+        width: 53%;
+        margin-right: 10%;
+        text-align: right;
+        opacity: 0.5;
+    }
+    #pc_title span {
+        color: white;
+        text-decoration: none;
+        font-size: 54px;
+        font-weight: bold;
+    }
+}
+/*PC 해더*/
+@media screen and (min-width:1110px) {
+    
+    #mo{
+        display: none;
+    }
+    #pc{
+        display: block;
+    }
+
+    header{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding-top: 50px;
+        transition: 0.3s;
+    }
+
+    header.sticky{
+        padding-top: 10px;
+        background-color: #111111;
+    }
+
+    header #pc_title {
+        margin-right: 10%;
+        text-align: right;
+    }
+
+    /* header nav {
+        height: 200px;
+    } */
+    /* header nav #title {
+        padding-top: 50px;
+    } */
+    header nav#pc #pc_title div{
+        display: none;
+    }
+    header nav#pc #pc_title a {
+        display: inline;
+        opacity: 50%;
+        font-weight: bold;
+        font-size: 24px;
+    }
+
+    header #pc_title hr {
+        margin: 5px 0 10px 0;
+    }
+    header nav#pc ul {
+        display: flex;
+        text-align: right;
+        margin-right: 10%;
+        justify-content: end;
+        white-space: nowrap;
+    }
+    header nav#pc ul li {
+        margin-left: 25px;
+    }
+    header nav#pc ul li a {
+        font-size: 20px;
+    }
+
+    header #pc ul li a:hover {
+        font-weight: bold;
+    }
+    header .title_text {
+        margin-top: 200px;
+        text-align: center;
+    }
+    header .title_text a {
+        font-size: 35px;
+    }
+}
+
+
+/*섹션*/
+section{
+    padding-top: 300px;
+    margin-bottom: 300px;
+}
+
+#line{
+    opacity: 0.2;
+}
+
+#container{
+    padding-bottom: 8px;
+    /* height: 1000px; */
+    position: relative;
+    z-index: -9999;
+    /* height: 100vh; */
+}
+#container::before {
+    content: "";
+    background: url("../image/background.png") ;
+    background-size: 320%;
+    background-repeat: no-repeat;
+    background-position: 30% 50%;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -99;
+}
+
+.footer_contents{
+    padding-top: 50px;
+}
+
+.footer_contents div{
+    margin-bottom: 20px;
+}
+
+/*pc중단점:1000px*/
+@media screen and (min-width:1110px){
+    #container{
+        position: relative;
+        z-index: -9999;
+    }
+    #container::before {
+        content: "";
+        background: url("../image/background_bl.png") center;
+        background-size: 120%;
+        background-repeat: no-repeat;
+        background-position: 70%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -99;
+    }
+
+    section{
+        width: 700px;
+        padding-top: 500px;
+        margin: 0 auto;
+        margin-bottom: 400px;
+    }
+
+    #sub_contents{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #sub_contents .sub_contents_text{
+        width: 50%;
+    }
+
+    footer {
+        margin: 0 auto;
+        max-width: 1640px;
+    }
+    footer::before {
+        background: none;
+    }
+
+    footer .footer_contents{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    footer  #footer_all .footer_contents a {
+        width: 18%;
+    }
+    footer  #footer_all .footer_contents a:nth-of-type(1)  {
+        width: 25%;
+    }
+}
+
+/*모바일 top버튼*/
+.goto-top {
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+    z-index: 999;
+    display: none;
+}
+.goto-top img {
+    width: 80%;
+}
+
+@media screen and (min-width:1000px) {
+    .goto-top {
+        position: fixed;
+        right: 50px;
+        bottom: 20px;
+        z-index: 999;
+        display: none;
+    }
+}

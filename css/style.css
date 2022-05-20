@@ -1,0 +1,1207 @@
+*{padding: 0; margin: 0; box-sizing: border-box; font-family: 'NanumGothic';}
+li {    list-style: none;}
+a { color: white; text-decoration: none; }
+
+body {
+    background-color: #111111;
+}
+
+
+/* ------------------------------ */
+/* 
+테스트용 입니다
+*/
+
+.test{
+    font-weight: bold;
+}
+
+
+
+
+/* -------------------------------------------- */
+p {
+    color: white;
+    text-decoration: none;
+}
+#title span {
+    color: white;
+    text-decoration: none;
+    font-size: 54px;
+    font-weight: bold;
+}
+.main_title {
+    font-size: 30px;
+}
+.sub_title {
+    font-size: 22px;
+    opacity: 50%;
+}
+@media screen and (min-width:1000px) {
+    .main_title {
+        font-size: 54px;
+        text-align: center;
+    }
+    .sub_title {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 150px;
+    }
+}
+
+/*모바일 */
+
+/*모바일 해더*/
+header {
+    background:url(../image/background.png) center;
+    height: 640px;
+    background-blend-mode: darken;
+}
+header #title {
+    margin-right: 10%;
+    text-align: right;
+}
+header nav #title a {
+    display: none;
+}
+header #title hr {
+    margin: 5px 0 10px 0;
+}
+header nav ul {
+    display: none;
+}
+@media screen and (max-width:999px) {
+    header .title_text {
+        float: right;
+        width: 30%;
+        margin-right: 10%;
+    }
+    header .title_text a{
+        float: right;
+        text-align: right;
+        opacity: 60%;
+    }
+}
+/*PC 해더*/
+@media screen and (min-width:1000px) {
+    header {
+        background: rgba(0, 0, 0, 0.5) url(../image/background_bl.png) bottom;
+        background-size: 105%;
+        background-repeat: no-repeat;
+        height: 1080px;
+        background-blend-mode: darken;
+    }
+    header nav {
+        /* height: 200px; */
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding-top: 50px;
+        transition: 0.3s;
+        z-index: 999;
+    }
+    header nav.sticky{
+        padding-top: 10px;
+        background-color: #111111;
+    }
+    /* header nav #title {
+        padding-top: 50px;
+    } */
+    header nav #title a {
+        display: inline;
+        opacity: 50%;
+        font-weight: bold;
+        font-size: 24px;
+    }
+    header nav ul {
+        display: flex;
+        text-align: right;
+        margin-right: 10%;
+        justify-content: end;
+        white-space: nowrap;
+        padding-bottom: 10px;
+    }
+    header nav ul li {
+        margin-left: 25px;
+    }
+    header nav ul li a {
+        font-size: 20px;
+    }
+    header nav ul li a:hover {
+        font-weight: bold;
+    }
+    header .title_text {
+        padding-top: 400px;
+        text-align: center;
+        text-shadow: 1px 1px 4px rgb(183, 183, 183);
+    }
+    header .title_text a {
+        font-size: 36px;
+        font-weight: bold;
+
+    }
+}
+
+/*모바일 online_exhibition*/
+#online_exhibition {
+    margin: 80px 15px 0 15px;
+}
+#online_exhibition .sub_title {
+    margin-bottom: 25px;
+}
+#online_exhibition .text {
+    font-size: 16px;
+    margin-bottom: 60px;
+}
+#online_exhibition #service_all {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#online_exhibition .service {
+    text-align: center;
+    margin-bottom: 45px;
+}
+#online_exhibition .service .service_img {
+    margin-bottom: 10px;
+}
+#online_exhibition .service .service_img img {
+    width: 35%;
+}
+#online_exhibition .service .service_title {
+    font-weight: bold;
+}
+#online_exhibition .service .service_text {
+    opacity: 50%;
+}
+/*PC online_exhibition*/
+@media screen and (min-width:1000px) {
+    #online_exhibition {
+        margin-top: 200px;
+    }
+    #online_exhibition .text {
+        text-align: center;
+        font-size: 30px;
+        margin:150px 0 60px 0;
+    }
+    #online_exhibition .text span {
+        font-weight: bold;
+        text-align: center;
+        font-size: 30px;
+    }
+    #online_exhibition #service_all {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 840px;
+        margin: 0 auto;
+        margin-top: 180px;
+    }
+    #online_exhibition .service {
+        width: 33%;
+        margin-bottom: 45px;
+    }
+    #online_exhibition .service .service_img {
+        margin-bottom: 10px;
+    }
+    #online_exhibition .service .service_img img {
+        width: 35%;
+    }
+    #online_exhibition .service .service_title {
+        font-weight: bold;
+    }
+    #online_exhibition .service .service_text {
+        opacity: 50%;
+    }
+}
+
+/*모바일 benefits*/
+#benefits {
+    margin: 70px 15px 0 15px;
+}
+#benefits .sub_title {
+    margin-bottom: 80px;
+}
+#benefits .benefits_contants {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+#benefits .benefits_all{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+#benefits .benefits_text {
+    border: 1px solid #888888;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+#benefits .benefits_text .benefits_contants_text{
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 16px;
+}
+#benefits .benefits_contants .benefits_img {
+    width: 65%;
+    margin: 0 auto;
+}
+#benefits .benefits_contants .benefits_img img{
+    width: 100%;
+}
+/*PC benefits*/
+@media screen and (min-width:1000px) {
+    #benefits {
+        margin: 200px 0;
+    }
+    #benefits .benefits_contants {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #benefits .benefits_contants .benefits_img{
+        width: 45%;
+    }
+    #benefits .benefits_contants .benefits_img img{
+        max-width: 900px;
+    }
+    #benefits .benefits_all{
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        margin: 0 auto;
+    }
+    #benefits .benefits_all .text_box {
+        font-size: 20px;
+    }
+}
+
+/*모바일 procedure*/
+#procedure {
+    margin: 100px 15px 0 15px;
+}
+#procedure .procedure_contents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+#procedure .procedure_contents .procedure_all {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 45px;
+}
+#procedure .procedure_contents .procedure_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    height: 250px;
+    width: 250px;
+    border: 2px solid white;
+    border-radius: 100%;
+    align-items: center;
+    text-align: center;
+}
+#procedure .procedure_contents .procedure_text p:nth-of-type(1){
+    opacity: 50%;
+    font-size:18px;
+    margin-bottom: 30px;
+}
+#procedure .procedure_contents .procedure_text p:nth-of-type(2){
+    font-size:20px;
+    font-weight: bold;
+}
+#procedure .procedure_contents .procedure_text a {
+    opacity: 50%;
+    margin-top: 5px;
+}
+/*PC procedure*/
+@media screen and (min-width:1000px) {
+    #procedure {
+        margin: 200px 20px 20px 0;
+        max-width: 1210px;
+        margin: 0 auto;
+    }
+    #procedure .procedure_contents {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin: 0 auto;
+        padding-top: 60px;
+    }
+    #procedure .procedure_contents .procedure_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 60px;
+        flex-wrap: nowrap;
+        height: 220px;
+        width: 220px;
+        border: 2px solid white;
+        border-radius: 100%;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/*모바일 booth_type*/
+#booth_type {
+    margin-top: 70px;
+}
+#booth_type .booth_type_text {
+    margin : 0 15px;
+}
+#booth_type .sub_title p:nth-of-type(2){
+    font-size: 16px;
+}
+#booth_type #type_all .type_contents .contents_text {
+    margin : 40px 15px 0 15px;
+}
+#booth_type #type_all .type_contents:nth-of-type(2){
+    text-align: right;
+}
+#booth_type #type_all .type_contents .contents_text p:nth-of-type(1) {
+    font-weight: bold;
+    font-size: 20px;
+}
+#booth_type #type_all .type_contents .contents_text p:nth-of-type(2) {
+    margin-bottom : 10px;
+    font-weight: bold;
+    font-size: 20px;
+    opacity: 50%;
+}
+#booth_type .type_contents .contents_img img {
+    width: 100%;
+    margin-top: 20px;
+}
+/*PC booth_type*/
+@media screen and (min-width:1000px) {
+    #booth_type {
+        margin-top: 200px;
+    }
+    #booth_type  #type_all .type_contents {
+        display: flex;
+        align-items: center;
+        margin: 160px 80px 0 80px;
+    }
+    #booth_type  #type_all .type_contents:nth-of-type(2n-1) {
+        flex-direction: row-reverse;
+    }
+    #booth_type  #type_all .type_contents .contents_text {
+        flex: 1;
+        margin: 0 auto;
+    }
+    #booth_type  #type_all .type_contents .contents_text  p:nth-of-type(1) {
+        font-size: 36px;
+    }
+    #booth_type  #type_all .type_contents .contents_text  p:nth-of-type(2) {
+        font-size: 1.6em;
+        padding-bottom: 60px;
+        opacity: 50%;
+    }
+    #booth_type  #type_all .type_contents .contents_text p {
+        font-size: 20px;
+    }
+    #booth_type  #type_all .type_contents .contents_text a {
+        font-size: 18px;
+    }
+    #booth_type #type_all .type_contents:nth-of-type(2n-1) {
+        text-align: left;
+    }
+    #booth_type #type_all .type_contents .contents_text:nth-of-type(2n-1) {
+        margin-left: 90px;
+    }
+    #booth_type #type_all .type_contents:nth-of-type(2){
+        text-align: right;
+    }
+    #booth_type #type_all .type_contents:nth-of-type(2) .contents_text {
+        margin-left: 0;
+        margin-right: 90px;
+    }
+    #booth_type #type_all .type_contents .contents_img  {
+        flex: 1;
+    }
+    #booth_type  #type_all .type_contents .contents_img img {
+        max-height: 625px;
+        margin: 0 auto;
+    }
+}
+
+/*모바일 plans*/
+@media screen and (max-width:999px) {
+    #plans_all_1 {
+        display: none;
+    }
+    #plans {
+        margin: 115px 15px 0 15px;
+    }
+    /*모바일 plans 탭 메뉴 스타일 지정 */
+    #boxs{
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid white;
+        color: white;
+        font-size: 18px;
+    }
+    /*모바일 plans 탭 메뉴 목록 스타일 지정 */
+    .box{
+        width: 300px;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+    }
+    #box1{
+        border: 1px solid #888888;
+        cursor: pointer;
+    }
+    #box2{
+        border: 1px solid #888888;
+        cursor: pointer;
+    }
+    #box3{
+        border: 1px solid #888888;
+        cursor: pointer;
+    }
+
+    /*모바일 plans 전체 p태그*/
+    .tab_item p{
+        color: #ffffff;
+    }
+    /*모바일 plans 신청기간 글자 p태그*/
+    .plans_day p{
+        opacity: 50%;
+        margin: 30px 0 10px 0;
+    }
+    /*모바일 plans 신청기간 밑줄 태그*/
+    .plans_day_text hr {
+        opacity: 50%;
+        margin-top: 15px;
+    }
+    /*모바일 plans 부스비용 글자 p태그*/
+    .plans_pay p{
+        opacity: 50%;
+        margin: 30px 0 10px 0;
+    }
+    /*모바일 plans 부스비용 밑줄 태그*/
+    .plans_pay_text hr {
+        opacity: 50%;
+        margin-top: 15px;
+    }
+    /*모바일 plans 제공사항 글자 p태그*/
+    .plans_give p{
+        opacity: 50%;
+        margin-top: 30px;
+    }
+    /*모바일 plans 제공사항 내용 p태그*/
+    .plans_give_text p{
+        margin-top: 15px;
+    }
+    /*모바일 plans 제공사항 밑줄 태그*/
+    .plans_give_text hr {
+        opacity: 50%;
+        margin-top: 15px;
+    }
+    /*모바일 plans 신청기간 날짜 p태그*/
+    .tab_item .item_text_day {
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
+    }
+    /*모바일 plans 부스비용 글자 p태그*/
+    .tab_item .item_text_second p{
+        opacity: 50%;
+        margin: 30px 0 10px 0;
+    }
+    /*모바일 plans 부스비용 가격 p태그*/
+    .tab_item .item_text_price {
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
+    }
+    /*모바일 plans 제공사항 글자 p태그*/
+    .tab_item .item_text_third p:nth-of-type(1){
+        opacity: 50%;
+        margin: 30px 0 10px 0;
+    }
+    /*모바일 plans 제공사항  p태그 간격 띄우기*/
+    .tab_item .item_text_third p{
+        margin-bottom: 10px ;
+    }
+    /*모바일 plans 제공사항 마지막 p태그 밑줄*/
+    .tab_item .item_text_third p:nth-last-of-type(1){
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
+    }
+    /*모바일 plans 옵션사항 글자 p태그*/
+    .plans_more p{
+        opacity: 50%;
+        margin-top: 30px;
+    }
+    /*모바일 plans 옵션사항 내용 p태그*/
+    .plans_more_text p{
+        margin-top: 15px;
+    }
+    #box4{
+        display: block;
+    }
+    #box5{
+        display: none;
+    }
+    #box6{
+        display: none;
+    }
+}
+/*PC plans*/
+@media screen and (min-width:1000px) {
+    #plans_all {
+        display: none;
+    }
+    #plans_all_1 {
+        display: block;
+    }
+    #plans {
+        margin: 200px 100px 0 100px;
+    }
+    /*PC plans 메뉴 스타일 지정 */
+    #boxs_1{
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-size: 32px;
+        margin-bottom: 50px;
+    }
+    #boxs_1 .box {
+        text-align: center;
+        width: 25%;
+        padding: 0 20px;
+    }
+    /*PC plans 메뉴 스타일 지정 */
+    #boxs_2 {
+        display: flex;
+        justify-content: center;
+        color: white;
+        padding: 25px 0;
+    }
+    #boxs_2 .box {
+        width: 25%;
+        font-size: 22px;
+        padding: 0 20px;
+    }
+    #boxs_2 .box p {
+        text-align: center;
+        font-size: 22px;
+    }
+    /*PC plans 메뉴 밑줄 스타일 지정 */
+    .boxs_1_hr {
+        color: white;
+        opacity: 50%;
+    }
+    #plans_all_1 .bigbox_1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 25px 0 0 0;
+    }
+    #plans_all_1 .bigbox_1 .plans_text_1 {
+        width: 25%;
+        padding: 0 20px 25px 20px;
+    }
+    #plans_all_1 .bigbox_1 .plans_text_1:nth-of-type(1) p {
+        text-align: center;
+        font-size: 22px;
+    }
+    #plans_all_1 .bigbox_1 .plans_text_1 p {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    /*옵션추가*/
+    #plans_all_1 .bigbox_2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 25px 0 0 0;
+    }
+    #plans_all_1 .bigbox_2 #plans_more_1 {
+        text-align: center;
+        font-size: 22px;
+        width: 25%;
+    }
+    #plans_all_1 .bigbox_2 #plans_more_1_text {
+        width: 75%;
+        padding: 0 20px 25px 20px;
+    }
+    #plans_all_1 .bigbox_2 #plans_more_1_text:nth-of-type(1) p {
+        text-align: center;
+        font-size: 22px;
+    }
+    #plans_all_1 .bigbox_2 #plans_more_1_text p {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+}
+
+/*모바일consultation*/
+#consultation {
+    margin: 115px 15px 0 15px;
+}
+#consultation .sub_title{
+    margin-bottom: 24px;
+}
+#consultation #process_all {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#consultation .process_contents {
+    flex-basis: 100%;
+}
+#consultation .process_contents .contents_icon {
+    text-align: center;
+}
+#consultation .process_contents .contents_icon img {
+    width: 25%;
+}
+#consultation .process_contents .contents_text {
+    text-align: center;
+    margin-bottom: 60px;
+}
+#consultation .process_contents .contents_text p:nth-of-type(1) {
+    font-weight: bold;
+    margin: 15px 0 5px 0;
+}
+#consultation .process_contents .contents_text p:nth-of-type(2) {
+    opacity: 50%;
+}
+/*PC consultation*/
+@media screen and (min-width:1000px) {
+    #consultation  {
+        margin: 200px 140px 0 140px;
+    }
+    #consultation #process_all {
+        max-width: 750px;
+        margin: 0 auto;
+        margin-top: 150px;
+    }
+    #consultation .process_contents {
+        flex-basis: 33%;
+    }
+    #consultation .process_contents .contents_icon img {
+        width: 35%;
+    }
+}
+
+/*모바일 contact*/
+#contact {
+    margin:55px 15px 0 15px;
+}
+#contact .sub_title_k{
+    margin:5px 0 50px 0;
+}
+#contact .sub_title_k p{
+    font-size: 18px;
+}
+.contact_title {
+    margin-bottom: 10px;
+}
+.contact_title a p{
+    display: inline-block;
+    color: red;
+}
+#Name{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: #111111;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 50px;
+    color: white;
+}
+#Tel{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: #111111;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 50px;
+    color: white;
+}
+#Com{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: #111111;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 50px;
+    color: white;
+}
+#Mail{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: #111111;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 50px;
+    color: white;
+}
+input[type=radio] {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 0.5em;
+    -webkit-appearance: none;
+    }
+input[type=radio]:checked {
+    background: url(data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==) no-repeat center center;
+    background-size: 9px 9px;
+    }
+.label{color:white}
+.contact_contents .contact_input:nth-of-type(5) {
+    margin-bottom: 50px;
+}
+.contact_contents .contact_input hr {
+    opacity: 50%;
+    margin-top: 5px;
+}
+#Inq{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: #111111;
+    height: 125px;
+    width: 100%;
+    margin-bottom: 10px;
+    color: white;
+}
+.label{color:white}
+.contact_input p{
+    display: inline-block;
+    color: red;
+}
+.button {
+    margin: 50px 0;
+    text-align: center;
+}
+.button button{
+    color: white;
+    padding: 10px 30px;
+    background-color: #111111;
+    border: 1px solid white;
+}
+#contact .contact_input span{
+    color: white;
+}
+#contact .contact_input_all .contact_input_1:nth-of-type(1) span {
+    display: flex;
+}
+#contact .contact_input_all .contact_input_1:nth-of-type(1) .checkbox {
+    display: flex;
+    align-items: center;
+}
+#contact .contact_input_all .contact_input_1:nth-of-type(1) .checkbox p {
+    color: red;
+}
+#contact .contact_input_all .contact_input_1:nth-last-of-type(1){
+    display: none;
+}
+/*PC contact 1024 */
+@media screen and (min-width:1000px) and (max-width:1024px) {
+    #contact {
+        margin: 140px 140px 0140px;
+    }
+    #contact .sub_title{
+        margin-bottom:58px;
+    }
+    #contact .sub_title_k{
+        margin-bottom:58px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    #contact .sub_title_k p{
+        font-size: 18px;
+    }
+    #contact .contact_contents{
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .contact_contents .contact_input .contact_title a span {
+        opacity: 50%;
+    }
+    .contact_contents .contact_input .contact_title {
+        display: inline-block;
+        height: 30px;
+        padding-top: 20px;
+    }
+    .contact_contents .contact_input:nth-of-type(1) {
+        display: flex;
+        width: 29%;
+    }
+    .contact_contents .contact_input:nth-of-type(1) a{
+        display: flex;
+        margin-right: 25px;
+    }
+    .contact_contents .contact_input #Name {
+        width: 90px;
+    }
+    .contact_contents .contact_input:nth-of-type(2) {
+        display: flex;
+        width: 35%;
+    }
+    .contact_contents .contact_input:nth-of-type(2) a {
+        display: flex;
+        margin-right: 10px;
+    }
+    .contact_contents .contact_input #Tel {
+        width: 110px;
+    }
+    .contact_contents .contact_input:nth-of-type(3) {
+        display: flex;
+        width: 33%;
+    }
+    .contact_contents .contact_input:nth-of-type(3) a {
+        display: flex;
+        margin-right: 10px;
+    }
+    .contact_contents .contact_input #Com {
+        width: 95px;
+    }
+    .contact_contents .contact_input:nth-of-type(4) {
+        display: flex;
+        width: 29%;
+    }
+    .contact_contents .contact_input:nth-of-type(4) a {
+        display: flex;
+        margin-right: 10px;
+    }
+    .contact_contents .contact_input #Mail {
+        width: 90px;
+    }
+    .contact_contents .contact_input:nth-of-type(5) {
+        display: flex;
+        width: 69%;
+    }
+    .contact_contents .contact_input:nth-of-type(5) a {
+        display: flex;
+        margin-right: 10px;
+    }
+    .contact_contents .contact_input:nth-of-type(5) .contact_title {
+        width: 150px;
+        margin-bottom: 0;
+    }
+    .contact_contents .contact_input #radio {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid #888888;
+        align-items: flex-end;
+        padding-bottom: 3px;
+    }
+    .contact_contents .contact_input hr {
+        display: none;
+    }
+    .contact_contents .contact_input:nth-of-type(6) {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .contact_contents .contact_input:nth-of-type(6) .contact_title {
+        margin-top: 20px;
+        width: 130px;
+    }
+    #Inq{
+        height: 225px;
+    }
+    .contact_contents .contact_input_all {
+        margin-top:25px;
+    }
+    #contact .contact_input_all .contact_input_1:nth-last-of-type(1){
+        display: block;
+    }
+    #contact .contact_input_all {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 80px;
+    }
+    #contact .contact_input_all .contact_input_1:nth-of-type(1) span {
+        display: flex;
+    }
+    #contact .contact_input_all .contact_input_1:nth-of-type(1) .checkbox {
+        display: flex;
+        align-items: center;
+    }
+    #contact .contact_input_all .contact_input_1:nth-of-type(1) .checkbox p {
+        color: red;
+    }
+    #contact .contact_input_all .contact_input_1:nth-last-of-type(1) span{
+        color: white;
+        display: flex;
+    }
+    #contact .contact_input_all .contact_input_1:nth-last-of-type(1) p{
+        color: red;
+    }
+    .button {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .button button{
+        color: white;
+        padding: 10px 170px;
+        background-color: #111111;
+        border: 1px solid white;
+    }
+}
+.line {
+    margin-top: 150px;
+    opacity: 20%;
+}
+/*PC contact pull */
+@media screen and (min-width:1025px) {
+    #contact {
+        margin: 140px 140px 0140px;
+    }
+    #contact .sub_title{
+        margin-bottom:58px;
+    }
+    #contact .sub_title_k{
+        margin-bottom:58px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    #contact .sub_title_k p{
+        font-size: 18px;
+    }
+    #contact .contact_contents{
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .contact_contents .contact_input .contact_title a span {
+        opacity: 50%;
+    }
+    .contact_contents .contact_input .contact_title {
+        display: inline-block;
+        height: 30px;
+        padding-top: 20px;
+    }
+    .contact_contents .contact_input:nth-of-type(1) {
+        display: flex;
+        width: 29%;
+    }
+    .contact_contents .contact_input:nth-of-type(1) a{
+        display: flex;
+        width: 110px;
+    }
+    .contact_contents .contact_input:nth-of-type(2) {
+        display: flex;
+        width: 35%;
+    }
+    .contact_contents .contact_input:nth-of-type(2) a {
+        display: flex;
+        width: 130px;
+    }
+    .contact_contents .contact_input:nth-of-type(3) {
+        display: flex;
+        width: 33%;
+    }
+    .contact_contents .contact_input:nth-of-type(3) a {
+        display: flex;
+        width: 130px;
+    }
+    .contact_contents .contact_input:nth-of-type(4) {
+        display: flex;
+        width: 29%;
+    }
+    .contact_contents .contact_input:nth-of-type(4) a {
+        display: flex;
+        width: 110px;
+    }
+    .contact_contents .contact_input:nth-of-type(5) {
+        display: flex;
+        width: 69%;
+    }
+    .contact_contents .contact_input:nth-of-type(5) .contact_title {
+        width: 150px;
+        margin-bottom: 0;
+    }
+    .contact_contents .contact_input #radio {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid #888888;
+        align-items: flex-end;
+        padding-bottom: 3px;
+    }
+    .contact_contents .contact_input hr {
+        display: none;
+    }
+    .contact_contents .contact_input:nth-of-type(6) {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .contact_contents .contact_input:nth-of-type(6) .contact_title {
+        margin-top: 20px;
+        width: 130px;
+    }
+    #Inq{
+        height: 225px;
+    }
+    .contact_contents .contact_input_all {
+        margin-top:25px;
+    }
+    #contact .contact_input_all .contact_input_1:nth-last-of-type(1){
+        display: block;
+    }
+    #contact .contact_input_all {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 80px;
+    }
+    #contact .contact_input_all .contact_input_1:nth-of-type(1) span {
+        display: flex;
+    }
+    #contact .contact_input_all .contact_input_1:nth-of-type(1) .checkbox {
+        display: flex;
+        align-items: center;
+    }
+    #contact .contact_input_all .contact_input_1:nth-of-type(1) .checkbox p {
+        color: red;
+    }
+    #contact .contact_input_all .contact_input_1:nth-last-of-type(1) span{
+        color: white;
+        display: flex;
+    }
+    #contact .contact_input_all .contact_input_1:nth-last-of-type(1) p{
+        color: red;
+    }
+    .button {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .button button{
+        color: white;
+        padding: 10px 170px;
+        background-color: #111111;
+        border: 1px solid white;
+    }
+}
+.line {
+    margin-top: 150px;
+    opacity: 20%;
+}
+/*모바일 footer*/
+footer {
+    position: relative;
+    z-index: -9999;
+    padding-bottom: 50px;
+}
+footer::before {
+    content: "";
+    background: url(../image/background.png) top;
+    background-repeat: no-repeat;
+    background-position: 30% 0%;
+    opacity: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -99;
+}
+#footer_all {
+    margin: 0 16px;
+}
+#footer_all .footer_top {
+    padding-top: 50px;
+    display: flex;
+    align-items: flex-end;
+}
+#footer_all .footer_top .logo a {
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+#footer_all .footer_contents {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+#footer_all .footer_contents a {
+    margin-top: 20px;
+    width: 100%;
+}
+/*PC footer*/
+@media screen and (min-width:1000px) {
+    .line {
+        opacity: 20%;
+    }
+    footer {
+        margin: 0 auto;
+        max-width: 1640px;
+    }
+    footer::before {
+        background: none;
+    }
+    #footer_all {
+        margin: 0 16px;
+    }
+    footer #footer_all .footer_contents {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    footer  #footer_all .footer_contents a {
+        width: 18%;
+    }
+    footer  #footer_all .footer_contents a:nth-of-type(1)  {
+        width: 25%;
+    }
+}
+
+/*모바일 top버튼*/
+.goto-top {
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+    z-index: 999;
+    display: none;
+}
+.goto-top img {
+    width: 80%;
+}
+
+@media screen and (min-width:1000px) {
+    .goto-top {
+        position: fixed;
+        right: 50px;
+        bottom: 20px;
+        z-index: 999;
+        display: none;
+    }
+}

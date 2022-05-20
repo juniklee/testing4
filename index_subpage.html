@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUNiX</title>
+    <link rel="stylesheet" href="./css/style_subpage.css">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+</head>
+<body>
+    <header>
+        <nav id="mo">
+            <div id ="mobile_title">
+                <span id="icon"><img src="./image/menu.png" alt=""></span>
+                <a>Online Exhibition by </a><span>JUNiX</span>
+                <hr>
+            </div>
+            <ul id="mobile_menu">
+                <li><a href="#what_we_do">JUNiX가 하는 일</a></li>
+                <li><a href="#news">새 소식</a></li>
+                <li><a href="#recruit">참가신청</a></li>
+                <li><a href="#project">프로젝트</a></li>
+                <li><a href="#customer">고객센터</a></li>
+            </ul>
+        </nav>
+
+        <nav id="pc">
+            <div id ="pc_title">
+                <a>Online Exhibition by </a><span>JUNiX</span>
+                <hr>
+            </div>
+            <ul id="pc_menu">
+                <li><a href="#what_we_do">JUNiX가 하는 일</a></li>
+                <li><a href="#news">새 소식</a></li>
+                <li><a href="#recruit">참가신청</a></li>
+                <li><a href="#project">프로젝트</a></li>
+                <li><a href="#customer">고객센터</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="container">
+        <!--모바일 토글메뉴-->
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#mobile_menu").hide();
+                $("#icon").click(function(){
+                    $("#mobile_menu").slideToggle("fast");
+                });
+            });
+        </script>
+        <!--헤더 메뉴업-->
+        <script>
+            window.addEventListener("scroll", function(){
+                var header = this.document.querySelector("header");
+                header.classList.toggle("sticky", window.scrollY >0);
+            });
+        </script>
+
+        <section>
+            <div id="sub_title">
+                <p>예약확인</p>
+            </div>
+            <div id="sub_contents">
+                <div class="sub_contents_text">
+                    <div><p>진행상황</p></div>
+                    <div id="sub_contents_1_text">
+                        <p>예약 접수중</p>
+                    </div>
+                </div>
+                <div class="sub_contents_text">
+                    <div><p>예약번호</p></div>
+                    <div id="sub_contents_2_text">
+                        <p>220505ABC123</p>
+                    </div>
+                </div>
+                <div class="sub_contents_text">
+                    <div><p>성함  <span>Name</span></p></div>
+                    <div id="sub_contents_3_text">
+                        <p>홍*동</p>
+                    </div>
+                </div>
+                <div class="sub_contents_text">
+                    <div><p>전화번호  <span>Phone</span></p></div>
+                    <div id="sub_contents_4_text">
+                        <p>010-1234-5****</p>
+                    </div>
+                </div>
+                <div class="sub_contents_text">
+                    <div>
+                        <p>회사명  <span>Company</span></p>
+                    </div>
+                    <div id="sub_contents_5_text">
+                        <p>JUNiX Exhibition</p>
+                    </div>
+                </div>
+                <div class="sub_contents_text">
+                    <div>
+                        <p>이메일  <span>E-mail</span></p>
+                    </div>
+                    <div id="sub_contents_6_text">
+                        <p>con****@junix.com</p>
+                    </div>
+                </div>
+                <div class="sub_contents_text">
+                    <div>
+                        <p>프로젝트 유형  <span>Type</span></p>
+                    </div>
+                    <div id="sub_contents_7_text">
+                        <p>프리미엄형</p>
+                    </div>
+                </div>    
+            </div>
+            <div id="sub_contents_booth">
+                <div id="mooni">
+                    <p>문의사항  <span>Inquiry</span></p>
+                </div>
+                <div id="sub_contents_8_text">
+                    <p>부스 2개 이상 상담요망</p>
+                </div>
+            </div>
+            <div id="button">
+                <div class="bnt">예약취소</div>
+                <div class="bnt">예약수정</div>
+            </div>
+        </section>
+        <hr id="line">
+        <footer>
+            <div class="footer_contents">
+                <div><p>주소 : 우리은하 오리온자리 나선팔 태양계</p></div>
+                <div><p>전화번호 : 012 - 345 - 6789</p></div>
+                <div><p>이메일 : contact@junix.co.kr</p></div>
+                <div><p>개인정보처리방침</p></div>
+                <div><p>@2022 JUNiX All Rights Reserved.</p></div>
+            </div>
+        </footer>
+    </div>
+    <a href="#TOP" class="goto-top" style="display: inline;">
+        <img src="./image/top.png" alt="top button">
+    </a>
+</body>
+</html>
